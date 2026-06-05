@@ -1,5 +1,3 @@
-# caelestia
-
 This is the main repo of the caelestia dots and contains the user configs for
 apps. This repo also includes an install script to install the entire dots.
 
