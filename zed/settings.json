@@ -1,0 +1,84 @@
+{
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": "Snowy",
+  "icon_theme": "Zed (Default)",
+  "buffer_font_family": "JetBrains Mono Nerd Font",
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "!nil"]
+    },
+    "QML": {
+      "formatter": {
+        "external": {
+          "command": "sh",
+          "arguments": [
+            "-c",
+            "tmp=$(mktemp --suffix .qml); cat > $tmp; qmlformat $tmp"
+          ]
+        }
+      }
+    }
+  },
+  "theme_overrides": {
+    "Snowy": {
+      "editor.background": "#0f1721",
+      "editor.foreground": "#eaf4ff",
+      "editor.gutter.background": "#0b1118",
+      "editor.line_number": "#7d90a8",
+      "editor.active_line_number": "#a8d9ff",
+      "editor.cursor": "#b9f3ff",
+      "editor.selection.background": "#a8d9ff33",
+      "editor.selection.inactive_background": "#a8d9ff22",
+      "panel.background": "#111b28",
+      "panel.border": "#31465a",
+      "status_bar.background": "#0b1118",
+      "status_bar.foreground": "#eaf4ff",
+      "status_bar.border": "#31465a",
+      "tab_bar.background": "#0f1721",
+      "tab.active_background": "#15202f",
+      "tab.active_foreground": "#eaf4ff",
+      "tab.inactive_background": "#0f1721",
+      "tab.inactive_foreground": "#7d90a8",
+      "sidebar.background": "#0f1721",
+      "sidebar.foreground": "#c6d3e2",
+      "sidebar.section_header": "#a8d9ff",
+      "terminal.background": "#0f1721",
+      "terminal.foreground": "#eaf4ff",
+      "terminal.ansi.black": "#0b1118",
+      "terminal.ansi.red": "#ffb7c7",
+      "terminal.ansi.green": "#d7ecff",
+      "terminal.ansi.yellow": "#c6d7ea",
+      "terminal.ansi.blue": "#95cfe8",
+      "terminal.ansi.magenta": "#d1e4f4",
+      "terminal.ansi.cyan": "#b9f3ff",
+      "terminal.ansi.white": "#eaf4ff",
+      "terminal.ansi.bright_black": "#31465a",
+      "terminal.ansi.bright_red": "#ffd9e0",
+      "terminal.ansi.bright_green": "#ecfbff",
+      "terminal.ansi.bright_yellow": "#f6fbff",
+      "terminal.ansi.bright_blue": "#c9efff",
+      "terminal.ansi.bright_magenta": "#dcecff",
+      "terminal.ansi.bright_cyan": "#e6fbff",
+      "terminal.ansi.bright_white": "#ffffff"
+    }
+  },
+  "lsp": {
+    "nixd": {
+      "settings": {
+        "nixpkgs": {
+          "expr": "import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs {}"
+        },
+        "formatting": {
+          "command": ["alejandra"]
+        }
+      }
+    },
+    "qml": {
+      "binary": {
+        "arguments": ["-E"]
+      }
+    }
+  }
+}

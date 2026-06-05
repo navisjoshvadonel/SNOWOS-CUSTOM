@@ -1,0 +1,23 @@
+@import "../caelestia/user.css";
+
+:root {
+  --spice-main: rgba(15, 23, 33, 0.88) !important;
+  --spice-main-elevated: rgba(26, 40, 56, 0.82) !important;
+  --spice-card: rgba(18, 27, 40, 0.8) !important;
+  --spice-button: rgba(168, 217, 255, 0.24) !important;
+  --spice-button-active: rgba(185, 243, 255, 0.42) !important;
+  --spice-rgb-shadow: 11, 17, 24 !important;
+}
+
+.main-topBar-background,
+.main-topBar-overlay,
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-background,
+.main-view-container__scroll-node-child div[style*="--background-base"]:not([style*="--background-base-min-contrast"]) {
+  background: linear-gradient(to bottom, rgba(26, 40, 56, 0.9), rgba(15, 23, 33, 0.75)) !important;
+  backdrop-filter: blur(22px) saturate(145%) !important;
+}
+
+.main-home-homeHeader {
+  display: none !important;
+}

@@ -1,0 +1,75 @@
+:root {
+    --snowy-bg: rgba(15, 23, 33, 0.88) !important;
+    --snowy-surface: rgba(21, 32, 47, 0.82) !important;
+    --snowy-surface-strong: rgba(34, 51, 69, 0.92) !important;
+    --snowy-border: rgba(168, 217, 255, 0.28) !important;
+    --snowy-accent: #a8d9ff !important;
+    --snowy-text: #eaf4ff !important;
+}
+
+#navigator-toolbox,
+#nav-bar,
+#PersonalToolbar,
+#TabsToolbar,
+#titlebar {
+    background: var(--snowy-bg) !important;
+    color: var(--snowy-text) !important;
+}
+
+#browser {
+    background: linear-gradient(to bottom, rgba(21, 32, 47, 0.88), rgba(15, 23, 33, 0.82)) !important;
+}
+
+.titlebar-buttonbox-container {
+    display: none !important;
+}
+
+#urlbar:not([focused]) .urlbar-input {
+    text-align: center !important;
+}
+
+#urlbar-background,
+#searchbar,
+.urlbarView,
+.panel-arrowcontent,
+.panel-arrowbox,
+.menupopup-arrowscrollbox {
+    border: 1px solid var(--snowy-border) !important;
+    border-radius: 14px !important;
+    background: color-mix(in srgb, var(--snowy-surface), transparent 6%) !important;
+    backdrop-filter: blur(24px) saturate(140%) !important;
+}
+
+.urlbar-page-action,
+#urlbar-go-button,
+.search-go-button,
+#tracking-protection-icon-container,
+#identity-icon-box,
+#identity-permission-box,
+.notification-anchor-icon,
+#userContext-icons,
+#urlbar-zoom-button,
+#page-action-buttons,
+.search-one-offs,
+#urlbar-search-mode-indicator {
+    border-radius: 10px !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+    margin-top: 8px !important;
+    margin-left: 0 !important;
+    width: var(--urlbar-width) !important;
+}
+
+.tabbrowser-tab[pending] {
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+toolbarbutton,
+menu,
+menuitem,
+button,
+.toolbarbutton-1 {
+    transition: all 0.15s ease !important;
+}
